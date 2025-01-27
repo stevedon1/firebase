@@ -1,22 +1,17 @@
-// Import the functions you need from the SDKs you need
+// firebaseConfig.js
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyABqMVx1IRuh94ToKZAqpaX4AUL_H8XoeM",
   authDomain: "tutorial1-69e1d.firebaseapp.com",
   projectId: "tutorial1-69e1d",
-  storageBucket: "tutorial1-69e1d.firebasestorage.app",
+  storageBucket: "tutorial1-69e1d.appspot.com",
   messagingSenderId: "1074960362083",
   appId: "1:1074960362083:web:eea5b7cb52f57643242656",
-  measurementId: "G-04TD9WHQKN"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// Export firebase services
-
+export const db = getFirestore(app); // Export Firestore instance
